@@ -1,4 +1,4 @@
-require_relative './chatwork-cli-controller'
+require_relative './controllers/chatwork-cli-controller'
 
 chatwork = ChatworkCliController.new
 results = chatwork.get_unread_rooms

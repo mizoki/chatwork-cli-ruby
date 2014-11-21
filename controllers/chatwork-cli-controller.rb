@@ -1,5 +1,5 @@
 require 'json'
-require_relative './chatwork-cli'
+require_relative '../models/chatwork-cli'
 
 class ChatworkCliController
   def initialize(token = ENV['CHATWORK_API_TOKEN'])
