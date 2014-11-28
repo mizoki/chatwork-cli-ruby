@@ -16,4 +16,12 @@ class ChatworkCliController
       []
     end
   end
+
+  def get_room_ids
+    response = @chatwork.get_rooms
+    unless response.nil?
+      response.success? ? results = JSON.parse(response.body) : nil
+      results
+    end
+  end
 end
