@@ -19,7 +19,7 @@ end
 puts '----------------------------------------------------------------------'
 
 @results.each_with_index do |res, i|
-  puts res['account']['name']
+  puts res['account']['name'] + ' [ ' + Time.at(res['send_time']).strftime('%Y/%m/%d %H:%M') + ' ]'
   res['body'].split('\n').each do |line|
     puts line
   end
