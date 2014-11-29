@@ -16,4 +16,23 @@ class ChatworkCliController
       []
     end
   end
+
+  def get_room_ids
+    response = @chatwork.get_rooms
+    unless response.nil?
+      response.success? ? results = JSON.parse(response.body) : nil
+      results
+    end
+  end
+
+  def get_messages(room_id)
+    response = @chatwork.get_rooms_messages(room_id)
+    unless response.nil?
+      response.success? ? results = JSON.parse(response.body) : nil
+      results.reject! { |res|
+        res['body'] == '[deleted]'
+      }
+      results
+    end
+  end
 end

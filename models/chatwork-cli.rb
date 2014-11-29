@@ -5,6 +5,7 @@ class ChatworkCli
   BASE_URI='https://api.chatwork.com/v1/'
 
   GET_ROOMS='rooms'
+  GET_ROOMS_MESSAGES='messages'
 
   def initialize(token)
     @api_token = token
@@ -13,6 +14,11 @@ class ChatworkCli
 
   def get_rooms
     get(GET_ROOMS)
+  end
+
+  def get_rooms_messages(room_id)
+    request = GET_ROOMS + '/' + room_id.to_s + '/' + GET_ROOMS_MESSAGES + '?force=1'
+    get(request)
   end
 
   private
