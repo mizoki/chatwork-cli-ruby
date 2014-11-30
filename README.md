@@ -20,7 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ export CHATWORK_API_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    $ chatwork-cli check-update
+    $ chatwork-cli get-messages
+
+## Development
+
+Run locally to check.
+
+    $ ruby -Ilib ./bin/chatwork-cli
+
+Install locally.
+
+    $ rake install
 
 ## Contributing
 
