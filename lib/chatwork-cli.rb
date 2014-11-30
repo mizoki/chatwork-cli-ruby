@@ -1,4 +1,4 @@
-require "chatwork_cli/version"
+require "chatwork-cli/version"
 
 module ChatworkCli
   # Your code goes here...
