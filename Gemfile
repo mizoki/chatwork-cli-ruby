@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'json'
-gem 'faraday'
+# Specify your gem's dependencies in chatwork_cli.gemspec
+gemspec

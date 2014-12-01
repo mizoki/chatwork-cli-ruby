@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+case ARGV[0]
+when 'check-update'
+  require 'chatwork-cli/check-update'
+when 'get-messages'
+  require 'chatwork-cli/get-messages'
+else
+  STDERR.puts <<EOS
+[Usage]
+  chatwork-cli check-update
+  chatwork-cli get-messages
+EOS
+  exit 1
+end

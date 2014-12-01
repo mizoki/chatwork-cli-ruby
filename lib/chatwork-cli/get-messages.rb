@@ -7,7 +7,7 @@ rooms.each_with_index do |room, i|
   puts sprintf('%02d: %s', i+1, room['name'])
 end
 
-input_id = gets
+input_id = STDIN.gets
 
 rooms.each_with_index do |room, i|
   if (i+1) == input_id.to_i
